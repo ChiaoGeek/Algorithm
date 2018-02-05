@@ -1,5 +1,5 @@
 .idea/
-/Java/IntroductionToAlgorithm/out/
+out/
 /Java/IntroductionToAlgorithm/.idea//
 .DS_Store
 /Java/IntroductionToAlgorithm/*.iml
