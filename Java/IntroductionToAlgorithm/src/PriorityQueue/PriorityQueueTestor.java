@@ -1,5 +1,6 @@
 package PriorityQueue;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class PriorityQueueTestor {
@@ -60,6 +61,33 @@ public class PriorityQueueTestor {
 
         }
         System.out.println("");
+
+
+
+        // minHeap
+        ArrayList<Integer[]> origin_array_list = new ArrayList<Integer[]>();
+
+
+        int[][] insert = {{10, 0}, {2, 1}, {3, 2}, {19, 3}, {20, 4}};
+
+        for (int i = 0; i < insert.length; i++) {
+            Integer[] test = {Integer.valueOf(insert[i][0]), Integer.valueOf(insert[i][1])};
+            origin_array_list.add(test);
+        }
+
+        p_queue.heappify(origin_array_list);
+
+        for (int i = 0; i < origin_array_list.size(); i++) {
+            System.out.print("{Key: ");
+            System.out.print(p_queue.arrList.get(i)[0]);
+            System.out.print(", ");
+            System.out.print("name: ");
+            System.out.print(p_queue.arrList.get(i)[1]);
+            System.out.print("}");
+
+        }
+        System.out.println("");
+
 
     }
 }

@@ -2,7 +2,7 @@ package PriorityQueue;
 import java.util.ArrayList;
 
 public class PriorityQueue {
-    ArrayList<Integer[]> arrList;
+    public ArrayList<Integer[]> arrList;
 
     public PriorityQueue() {
         this.arrList = new ArrayList<Integer[]>();
@@ -22,6 +22,15 @@ public class PriorityQueue {
             }
 
 
+        }
+    }
+
+    public void heappify(ArrayList<Integer[]> origin_arrList) {    // n
+        this.arrList = origin_arrList;
+        int len = origin_arrList.size();
+        int first_not_leaf_node = (int) Math.floor(len / 2.0) - 1;
+        for(int i = first_not_leaf_node; i >= 0; i--) {
+            this.minHeap(i);
         }
     }
 
